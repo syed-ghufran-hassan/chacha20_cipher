@@ -47,4 +47,22 @@ cipher.apply_keystream(&mut data[..]);
 println!("Decrypted data: {:?}", std::str::from_utf8(data).unwrap());
 ```
 
+## API Reference
+
+ChaCha20: The main cipher struct used for encryption and decryption.
+
+### Methods:
+
+```rust
+new(key: &Key, nonce: &Nonce): Creates a new ChaCha20 instance.
+apply_keystream(&mut data: &mut [u8]): Applies the keystream to the data for encryption or decryption.
+```
+
+To run the tests for this library, use the following command:
+
+```rust
+cargo test
+```
+
+
 
